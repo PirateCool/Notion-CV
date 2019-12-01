@@ -1,0 +1,653 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Curriculum 💼 Ugo Gessa</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b64494ec-5d6d-42db-8a1a-1d2acdc99d2f" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 35.58%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Curriculum%20Ugo%20Gessa/my-tete.jpeg"/></div><h1 class="page-title">Curriculum 💼 Ugo Gessa</h1></header><div class="page-body"><div id="9e3dbe7a-281f-4839-b3ed-4aad1d710dc3" class="column-list"><div id="5d4cf56c-b4da-4bef-8e54-6ebbe4e5347d" style="width:87.5%" class="column"><h2 id="047a2c20-f0e8-42fc-aef3-0d831187c7bc" class="">Web developer, User Experience &amp; Product Designer</h2><p id="8e89f98d-9e11-4c50-9b27-7b9582a3c683" class="block-color-gray">​Based in Strasbourg 🛫 Travelling the World 👨‍💻 Can work remote </p><p id="53cfd6b8-b39e-49f8-9e01-bb3eae9681c1" class="">
+</p><p id="62df4406-c3c9-4ac7-ace0-f4e3c1aae59a" class=""><strong>💡Plan - 🛠Build - 🚀Launch - 🔎Analyse - 🌱lGrow - 💰Monetize - 🤖 Automate</strong></p><p id="f0c2cfc7-cd9b-47f0-aa97-96b3bd780078" class="">
+</p></div><div id="3f750112-8f17-46a3-9aa7-4d3c9a246a5f" style="width:12.5%" class="column"><p id="2f099a33-2ed8-44b4-bb77-c1ced04ee88d" class="block-color-gray">updated: 
+18.09</p><p id="9d3e2a4c-02fc-44af-a927-1ce978b3ea0c" class="">
+</p></div></div><p id="6e131f87-94d9-4dc2-aa4a-a3cad88eb762" class=""><strong>Key Expertise</strong></p><ul id="286d97e8-c2b6-4621-8aa2-41c48f018b56" class="bulleted-list"><li>Build prototypes &amp; MVPs to Validate Business Designs</li></ul><ul id="8599fbd0-ec10-48f1-b87f-c674ee0d6bbd" class="bulleted-list"><li>Product &amp; Marketing Strategy</li></ul><ul id="6c001cba-ed9d-4f66-afc6-a9609c194284" class="bulleted-list"><li>Design Sprint Facilitation</li></ul><ul id="fb103755-5a3e-4129-8f72-891e44c93caf" class="bulleted-list"><li>Conversion-Oriented Digital User Experiences</li></ul><ul id="d10bb030-a1e8-4580-8e29-355699b32ba2" class="bulleted-list"><li>Deep development &amp; business understanding</li></ul><h1 id="ba71abdc-acd2-4a1c-b361-7b3dc689d52f" class="">Summary</h1><p id="02b33287-96d8-4c39-b37a-c982ff5b852f" class="">Bootstrapping ethics startups &amp; online-businesses is my passion. I like to develop <strong>conversion oriented user experiences</strong> and <strong>digital</strong> <strong>user interfaces </strong>and doing that since I&#x27;m 16. I didn&#x27;t know back then what was a persona or UX. Also i&#x27;d love to <strong>build effective &amp; human-centered </strong>designs, teams and processes. I believe that agile &amp; collaborative work is a nice way to make best <strong>product, </strong>this is why i also always recommend &amp; facilitate <strong>Design</strong> <strong>Sprints</strong>. Also I got chance to work on <strong>40+ projects</strong>, sometimes <strong>ambitious startups, </strong>sometimes to <strong>try to save the planet</strong> or<strong> </strong>with<strong> </strong>small/mid-sized <strong>businesses </strong>and <strong>creatives</strong> people<strong> </strong>around the world. So many of theses projects failed, or didn&#x27;t reach their full potential, but as <strong>web maker</strong>, you need to <strong>experiment, analyse &amp; grow 🌱</strong>. I&#x27;d like to work on e-learning, or as a developer/marketer for an agency. I really want to learn from you and deliver my best.
+</p><p id="352ded38-8c6c-4c69-a4b6-88e6d04c0549" class="">
+</p><div id="d13d2509-c8ec-48ed-9c20-e520390d7e45" class="column-list"><div id="07ffbf4a-ca85-4d02-a00e-52f6cfccaecf" style="width:50%" class="column"><h3 id="43b84abc-1b09-425c-b2bf-f142f48e0187" class=""><strong>Web maker </strong></h3><p id="ddc8cc1b-b4ef-461a-b3f8-81c71d447f6b" class=""><strong>Front-end 
+</strong>HTML/CSS/SASS<strong>, </strong>Any CSS Frameworks, Webflow, a little JS and React/Vue.js, most templates systems, Figma, Bootstrap</p><p id="c9810749-1f98-4fdc-ab94-81ff61fd5522" class=""><strong>Back-end
+</strong>Ruby, Rails, Any CMS, (WordPress PHP, Shopify expert, ..), some Python, No-code apps, API &amp; Data manipulation</p><p id="e4141478-ef3b-47b3-a331-99045b75597c" class=""><strong>Project management 
+</strong>Agile, Remote, research, documentation, Roadmap, Lean Process, Git, Product Strategy, <strong><mark class="highlight-yellow">Design Sprint Workshop</mark></strong></p><p id="427a0d3d-f330-46d0-a3a1-1d84d4d6843b" class="">
+</p></div><div id="a11ab699-9816-4b6d-b214-ab28877d7856" style="width:50%" class="column"><hr id="e895d356-4cee-4ae9-adc3-efcc8e459a63"/><p id="7c03b671-c2e2-405a-b368-2c9f62d8c0e6" class="">
+</p><p id="12850533-5d99-468f-b14f-174f4a8caea3" class=""><strong>User Experience (UX) Design
+</strong>User Research, User Testing, Usability Testing, CRO, SEO, Quick Interactive Prototyping, MVP, Project (Information) Architecture, Success Tracking</p><p id="09d70cde-68c8-4255-a78a-8f8b71a30bd9" class=""><strong>Webmarketing
+</strong>Facebook/Instagram Ads Management, Google Ads, Retargeting, Twitter, Marketing automations, E-commerce, Campaign Testing &amp; Budget Optimisation, Blog, Email Marketing, Competitive Research, Growth Hacking, Chatbots</p><p id="5a1fd066-0bde-48ee-9357-b4cec9cc2696" class="">
+</p></div></div><p id="5a4586af-d0ab-420e-ae21-a1cd456d2043" class="">
+</p><p id="81ccdc61-6945-479a-ae21-36e231212fc9" class="">
+</p><div id="55d680b4-6325-40d1-a83d-8dedd34ee89a" class="column-list"><div id="7c6b8281-b0ef-469b-be72-967a6bf7c8eb" style="width:50%" class="column"><h1 id="a84ab33f-e9e4-4d4e-8000-19fb986925b5" class="">Work &amp; Experiences History</h1></div><div id="e4a9cdbe-b227-4b76-a336-bee39838b729" style="width:12.500000000000004%" class="column"><p id="92d15016-05c3-4981-887e-16112e7c634c" class="">🍕freelance
+— project</p><p id="496e205b-fa02-4964-8408-fe2a536881ec" class="">
+</p></div><div id="c59c1ae5-2d1f-40f7-b47f-c1c8b81f1f81" style="width:12.50000000000001%" class="column"><p id="42b888fc-3a1f-4abc-a38d-f004b72dbffd" class="">🤓 60% — learning</p></div><div id="bf743cb3-881d-41f0-a1f9-44c7a79e7c3f" style="width:25%" class="column"><p id="d8156a51-679e-4e18-85e1-3206b031b8e0" class="">🚀40% — 
+making startups</p><p id="5e9255c2-5017-4823-a56d-6349b8eec67c" class="">
+</p></div></div><div id="09b7d11c-5269-440e-8e11-67b2faf22c22" class="column-list"><div id="49b64122-8410-409a-8d8c-15d96591babf" style="width:12.5%" class="column"><p id="2d45c784-3033-47cd-a1c6-1954fd7b13d9" class="">Today
+</p><p id="13dd241e-3ccd-40d6-815d-9cabac2a391b" class="">
+
+</p><p id="02d7a79a-fb1a-4556-9b34-4287877105b7" class="">2019</p><p id="5daf5ac3-1953-48b3-ac3d-ad14728180a8" class="">
+</p></div><div id="a104cc2e-8559-4ad9-a59e-e050ebc91625" style="width:87.5%" class="column"><p id="b90120ed-6504-464b-9763-52aaa41fccfd" class=""><strong>UX Junior @ —- 
+</strong>I want to learn more on<strong> User Experience</strong>, <strong>Product Strategy</strong> and <mark class="highlight-yellow"><strong>Design Sprints Workshops
+</strong></mark>Ready to work and grow in development, marketing, sales, management. 
+<a href="https://calendly.com/webagency/project">Click here to book a call</a> </p><p id="09137477-708f-40da-9aee-2a44a0f032c3" class="">
+</p><p id="b2b7d2fe-c654-48f3-a3d7-b67bed3e6825" class=""><strong>E-commerce - Business Owner </strong>@ <a href="http://ergoposture.fr">ergoposture.fr</a>
+My e-commerce project to prevent office workers from bad posture 🤸
+Will grow as a office accessories online store
+<em><mark class="highlight-gray">PROMO CODE:</mark></em><mark class="highlight-gray"> HIRED20</mark></p><p id="88256716-6803-4228-ada6-c17fe69ea84a" class=""><strong>Freelance Junior Growth Hacker</strong> @ <a href="http://growthdistrict.io">Growth District</a> ⚡
+- Acquisition Testing - Ads Testing &amp; Optimisation
+- Conversion Rate Optimisation (CRO)
+- SEO, Copywriting
+- Product Strategy
+- Agency Events
+- Build Design Systems for multiple Projects
+- Emailing</p><p id="88a4a75d-e6ab-4dc0-b2d2-df7174bde56e" class=""><strong><em>Nomadventures</em></strong> is a coliving space <em>(project) </em>for creatives, entrepreneurs, digital nomads and everyone that is willing to try the experience designed for sharing, traveling, make startups, enjoy life and hack it. You still come there to work. Stay connected @ <a href="mailto:noeweyant@gmail.com">Noemie Weyant</a></p></div></div><div id="0e6daed9-66fe-4a78-bf6f-a83305f1833e" class="column-list"><div id="4b086c19-bbbd-44e0-9bcc-d2eafaee24f4" style="width:12.5%" class="column"><p id="fe54328c-346b-40e3-b1b7-ac9311da61aa" class="">2018</p><p id="248cff29-2dd6-4c60-b03b-0436e81f334c" class="">
+</p></div><div id="1f9d8b19-052f-4d7d-9ef0-d29f2dec9176" style="width:87.5%" class="column"><p id="9e381b90-bd96-4750-ba0c-be0e2aad163d" class=""><strong>Freelance Developer Designer</strong> @ DigiMKT
+Improved Conversion and general UX for both <strong>small &amp;</strong> <strong>large eCommerce</strong>.</p><p id="74fd8a56-21ce-4b70-a927-e6d5c758020e" class=""><strong>3 month intensive bootcamp</strong> @ <a href="http://thehackingproject.org">The Hacking Project</a>
+Learned Ruby on Rails, MVP, API, Team &amp; Agile Management</p><p id="492c8ce2-3a8d-4246-9663-d84786be037a" class=""><strong>4 month</strong> <strong>Working from Canggu, Bali 🌴
+</strong>Freelance,<strong> </strong>Project/remote organisation, management, co-living/working, digital nomads events, 🏄🏿</p><p id="a03e2104-7f69-4ab1-8e8a-d9b77480748c" class=""><strong>Web Developer &amp; Marketer Freelance </strong>@ <a href="http://ugogessa.carrd.co">Ugo Gessa</a>
+Started the freelance business. Create engaging landing pages &amp; websites for a better lead generation. Code marketing automations. </p><p id="89b9a228-c325-4c32-9ce2-631075ea5490" class=""><strong>Cursus.io</strong> @ <a href="http://cursus.io">cursus.io</a>, <em><strong>Find the best courses
+</strong></em>Is an EducTech 📚startup project. It was built, launched <mark class="highlight-gray">and failed</mark> multiple times, to help internet users finds the best courses, interact with a education community, discover alternatives pedagogy. <em>The projects had some team &amp; product management trouble on the go, this experience brought us so much learning. </em>Developed Longterm UX Vision And Strategy &amp; Fullstack Development. <em>
+</em><mark class="highlight-gray"><em>(Coming soon again)</em></mark></p></div></div><div id="895bfa8a-f236-48cc-ba49-fd360319ad57" class="column-list"><div id="27db8a34-92b9-45c3-b0cf-96b3905f0709" style="width:12.5%" class="column"><p id="9a2ed8d3-1510-4a6f-85ba-2d28e5997325" class="">2017</p><p id="1dc6bc41-ab4e-4a6b-8587-bbe9718610ca" class="">
+</p><p id="7eece521-e053-4688-ad96-847409a505b0" class="">
+</p><p id="0ca5d8a1-8a98-466c-813f-121fd38e5ae3" class="">
+</p><p id="f9faaac4-9060-4794-8157-0a06ef1498b0" class="">
+</p><p id="41e42f69-a6f2-4f2e-ae05-d3a5638f78e7" class="">2016</p></div><div id="ae08b484-f1ee-4563-8702-360c971df314" style="width:87.5%" class="column"><p id="2749b6a0-2852-40ad-ad37-c31bd5094ff3" class=""><strong>Cocktail Bartender</strong> @ <a href="https://milanotorino.eu/strasbourg/">Milano Torino</a> 
+Launch &amp; work in the best <em>cocktail-pizza-aperitivo</em> restaurant/bar in Strasbourg</p><p id="99bbd74b-2114-43f5-b57e-f3c5742076f9" class=""><strong>Pay holidays with websites &amp; marketing</strong> @ <a href="https://hotelparko.gr/">Parko Hôtel</a> &amp; <a href="http://instagram.com/theparosisland">theparosisland</a>
+First Digital Nomad Experience in Paros, Greece</p><p id="95061d7e-4b34-47c7-9fd9-e18e7089af09" class=""><strong>AMAP Strasbourg</strong> - <a href="http://amap-strasbourg.carrd.co">@ amap-strasbourg.carrd.co</a>
+Fresh fruits &amp; vegetables locally picked, delivered with bikes 🚴‍♀️🍱</p><p id="c68696b3-5a59-40f9-b1bc-61a2678d6707" class="">
+</p><p id="1a1b4490-0aa9-4272-8936-b9fc1f0ff297" class=""><strong>First</strong> <strong>E-commerce Experience</strong> @ <a href="http://www.peaceofpirates.com">peaceofpirates.com,</a><strong><em> 
+</em></strong><em>a travel accessories general store. </em>I&#x27;d like to turn it into a blog or just give this project a second life</p><p id="4b2b8626-1f7f-4f7e-a331-9b12c2b9b74d" class=""><strong>Bartender 🍸</strong> @ Le QG (CDD) &amp; Hilton (Extra) —&gt; <a href="https://www.barschool.net/barschools/phuket">European Cocktail Bartender Certification</a>, Thailand 🌏</p></div></div><div id="381f85fb-e5d8-4b5b-9a77-23deb6bb6045" class="column-list"><div id="a0b20e98-67f8-4111-8b20-9fe2e331dc80" style="width:12.5%" class="column"><p id="d3a6aa03-f62e-4d69-980a-c2af76d761f8" class="">2015</p><p id="425980c9-a48b-4800-9890-2af653c640fe" class="">
+2013-2016</p></div><div id="3460b123-b359-406b-8444-702cebac065d" style="width:87.5%" class="column"><p id="84d241b3-ffc4-4426-85c0-8ffa7c99000f" class=""><strong>New Zealand</strong> 1 year work and travel - Landscaping, cow-boying, apple &amp; wine works, hostel staff</p><p id="d23708bc-54af-4677-9fa4-ffeddf5d2fd8" class="">
+Creating web projects and websites, blogs, videos, <a href="https://soundcloud.com/piratemusique/tracks">music</a>, start writings &amp; testing. Sell on e-bay and <a href="https://www.google.com/search?q=gorilla+gripper">amazon,</a> hack games, <del>crack softs</del>.., <del>make money online</del>. While going to high school</p></div></div><h1 id="bb044c4b-6e1c-4f22-be9d-bc011dec7c5e" class="">Education, learning resources, mentoring</h1><div id="3e7b37d8-6a8f-451b-94ef-1ba3592a63a1" class="column-list"><div id="b660b1dd-913b-43e5-bc56-56839d9c6c3c" style="width:18.75%" class="column"><p id="cf2a9f11-5ac3-4c0b-9084-1483148b5aa1" class=""><strong>Web Development
+
+
+</strong></p><p id="66c0c7a2-4eae-442e-a8d9-d06a57d0f18e" class=""><strong>Marketing
+
+
+
+</strong></p><p id="cdcf8e75-4198-4b92-88a9-076805fb44f1" class=""><strong>UX</strong></p><p id="0746c16e-5b10-4dff-871b-b77ad7af5310" class="">
+</p><p id="4621f89a-1c63-4f44-9fcb-0bce51b03571" class=""><strong>Project Management
+
+
+</strong></p><p id="ca88196f-f213-4568-9af4-6477bea84ee6" class=""><strong>Books</strong></p><p id="b5830ff0-5cf2-4536-aa30-dd7a43961c56" class="">
+</p></div><div id="0a56c93e-31fc-4ee1-b4a7-de09980acba4" style="width:81.25%" class="column"><p id="75687dd4-bd04-47f5-9b69-f4dce43f7836" class=""><strong>@ Bootcamps, online courses, learning platforms</strong>
+The Hacking Project, Le Wagon On Demand, GoRails, freecodecamp 
+Webcrunch, Grafikart, Udemy, Tuto.com, <mark class="highlight-gray">Github, stackoverflow
+</mark><em>→ Wish to learn more about Python, Vue.js, JavaScript</em></p><p id="57554984-1dfb-4e5f-8db8-9115c9d82be9" class="">→ <strong>Trying </strong>to launch startups and being an <strong>entrepreneur..
+</strong>Openclassrooms, Marketing Mania, Antoine BM, Niel Patel, Sean Ellis
+Internal courses &amp; mentoring @ Growth District
+Ecommerce → Gabriel St-Germain, Yomi Denzel, Luca Freund <em>(mentor)
+Willing to develop strong skills</em> in <strong>sales, SEO, Ads Scaling.</strong></p><p id="e3a27756-1ae5-495c-aa6e-7611dc7b17fd" class=""><strong>Lots of online courses</strong> @ Udemy , <strong>Design Sprint Masterclass </strong>@ <a href="http://ajsmart.com">Aj&amp;Smart</a>
+<em>→ I&#x27;d freaking like to learn more about Product, UX (and UI :o)</em></p><p id="0ca3ce69-5e88-4451-9d10-d7349d5c876a" class=""><strong>Formation Freelance @ </strong><a href="http://livementor.io">LiveMentor </a>
+<strong>Digital Project Management</strong> @ <a href="http://openclassrooms.com">OpenClassrooms</a> 
+Growth District with <em>@ </em><em><a href="mailto:ghp.strasbourg@gmail.com">Bryan Rassen, Alexis Landres, Niko Dsign, Romain Pelletier, David Lakomski</a></em></p><p id="26d783af-5af2-480f-9bcb-4ebef0e27fe1" class="">
+</p><p id="67148337-5a08-4aa4-9fdb-0d483a1288b0" class="">Sprint, Hacking Growth, Think and grow rich, The 4-hour week, Hooked, The Book of Jungle, Radical Candor, How to win Friends and Influence people, Hooked <mark class="highlight-gray"><em>&amp; more lectures</em></mark><em> 📕</em></p><p id="62c8dd30-0683-4912-9fae-5a1eaabe5ad7" class="">
+</p></div></div><h1 id="d5b3f3b8-1412-4a5d-b70f-5a5b723f1565" class="">I’m available for projects. Would love to talk about yours ! </h1><div id="8e2c4b8d-5f65-4d64-9545-9e9eca62d0e1" class="column-list"><div id="50931a05-d05a-461d-a1cb-a8eea3efc0a4" style="width:8.695652173913043%" class="column"><figure id="e8fec31a-18bc-47ec-afd1-8bf9166835b0" class="image"><a href="https://images.unsplash.com/photo-1489035300997-93cd03b5a885?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:60px" src="https://images.unsplash.com/photo-1489035300997-93cd03b5a885?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure></div><div id="dec8c6c8-42d8-41cf-b201-23672421b5e1" style="width:39.130434782608695%" class="column"><p id="7dcbd79a-144f-4e27-9eb4-e10d3ca6eb58" class=""><a href="mailto:ugogessa@gmail.com"><strong>ugogessa@gmail.com </strong></a><strong>✉️</strong></p></div><div id="e5c3737c-6c5d-480e-b43f-52644a00c2b4" style="width:52.17391304347825%" class="column"><p id="43c8b2b7-cdc0-4da5-a76f-c2ac825e1df0" class="">Phone: 06 32 59 90 61
+<a href="https://calendly.com/webagency/project"><strong>Book a phone call 👔</strong></a></p><p id="c7168cc5-0071-4c4e-9fe0-bd0b54c4b0c4" class="">
+</p></div></div><p id="62664faf-f188-46b9-ac33-a54d4061d3f2" class="">
+
+
+
+</p><p id="161fbe65-320b-443e-ae52-1b4e7d226ee6" class="">
+</p><p id="86f93b0d-ffbb-4440-a6cb-d5d382ef83aa" class="">
+</p></div></article></body></html>
